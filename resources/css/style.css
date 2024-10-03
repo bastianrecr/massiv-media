@@ -11,6 +11,7 @@ body {
   text-align: center;
   font-size: 16px;
 }
+
 /* Header styling */
 
 .nav,
@@ -88,6 +89,7 @@ h2 {
   color: #eef0eb;
 }
 
+/* Gallery Styles */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -96,11 +98,14 @@ h2 {
 }
 
 .gallery img {
+  display: block;
+  margin: 0 auto;       /* Centra las imágenes */
   width: 100%;
-  max-width: 500px;
+  max-width: 500px;     /* Limita el ancho máximo */
   height: auto;
 }
 
+/* Botón */
 .home__button {
   display: inline-block;
   background-color: #042bfc;
@@ -116,51 +121,11 @@ h2 {
   color: #040404;
 }
 
-/* Form Styles */
-/* form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #333;
-  border-radius: 8px;
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-  color: #eef0eb;
-}
-
-form input,
-form textarea {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-form input[type="submit"] {
-  background-color: #042bfc;
-  color: #eef0eb;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-  background-color: #eef0eb;
-  color: #042bfc;
-} */
+/* Contact Section */
 .contact {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-.contact__buttons {
-  list-style-type: none;
-  padding-left: 0;
 }
 
 .contact__button {
@@ -173,7 +138,7 @@ form input[type="submit"]:hover {
   border-radius: 5px;
   margin-top: 1rem;
   width: 22rem;
-  text-decoration: none; /* Elimina el subrayado del enlace */
+  text-decoration: none;
 }
 
 .button-text {
@@ -184,7 +149,6 @@ form input[type="submit"]:hover {
   width: 3rem;
 }
 
-/* Cambiar el color de fondo, texto y logo en hover */
 .contact__button:hover {
   background-color: #eef0eb;
   cursor: pointer;
@@ -195,8 +159,7 @@ form input[type="submit"]:hover {
 }
 
 .contact__button:hover .social-logo {
-  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%)
-    contrast(100%);
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
 
 footer {
@@ -205,12 +168,21 @@ footer {
   width: 100%;
 }
 
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .home__logo {
     width: 80%;
     height: auto;
   }
+
+  .gallery img {
+    width: 100%;  /* Asegura que las imágenes se ajusten en pantallas pequeñas */
+    max-width: 100%;
+  }
+
   .gallery {
-    width: 80%;
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
