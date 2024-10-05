@@ -16,8 +16,8 @@ body {
 
 .nav,
 footer {
-  background-color: #b4b8ab;
-  color: #2d2d34;
+  background-color: #040404;
+  color: #eef0eb;
 }
 
 .nav {
@@ -42,14 +42,14 @@ footer {
 }
 
 .nav a {
-  color: #2d2d34;
+  color: #eef0eb;
   text-decoration: none;
   padding: 5px 10px;
 }
 
 .nav a:hover {
-  background-color: #eef0eb;
-  color: #2d2d34;
+  background-color: #040404;
+  color: #eef0eb;
 }
 
 .overlay {
