@@ -99,9 +99,9 @@ h2 {
 
 .gallery img {
   display: block;
-  margin: 0 auto;       /* Centra las imágenes */
+  margin: 0 auto; /* Centra las imágenes */
   width: 100%;
-  max-width: 500px;     /* Limita el ancho máximo */
+  max-width: 500px; /* Limita el ancho máximo */
   height: auto;
 }
 
@@ -159,7 +159,8 @@ h2 {
 }
 
 .contact__button:hover .social-logo {
-  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%)
+    contrast(100%);
 }
 
 footer {
@@ -176,7 +177,7 @@ footer {
   }
 
   .gallery img {
-    width: 100%;  /* Asegura que las imágenes se ajusten en pantallas pequeñas */
+    width: 100%; /* Asegura que las imágenes se ajusten en pantallas pequeñas */
     max-width: 100%;
   }
 
@@ -185,4 +186,8 @@ footer {
     width: 100%;
     text-align: center;
   }
+}
+.custom-video {
+  max-width: 500px;
+  width: 100%;
 }
