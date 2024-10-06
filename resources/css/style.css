@@ -53,6 +53,11 @@ footer {
 }
 
 .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 4rem;
 }
@@ -68,7 +73,7 @@ footer {
 }
 
 .home__logo {
-  width: 20rem;
+  width: 50rem;
   flex-shrink: 1;
 }
 
@@ -172,7 +177,7 @@ footer {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .home__logo {
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 
