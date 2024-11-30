@@ -95,17 +95,14 @@ h2 {
 
 /* Gallery Styles */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .gallery img {
   display: block;
-  margin: 0 auto; /* Centra las imágenes */
   width: 100%;
-  max-width: 500px; /* Limita el ancho máximo */
   height: auto;
 }
 
@@ -186,7 +183,8 @@ footer {
   }
 
   .gallery {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     text-align: center;
   }
