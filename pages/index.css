@@ -1,6 +1,6 @@
-* {
-  box-sizing: border-box;
-}
+@import url("../vendor/normalize.css");
+
+@import url("../blocks/nav.css");
 
 body {
   font-family: Arial, sans-serif;
@@ -14,52 +14,15 @@ body {
 
 /* Header styling */
 
-.nav,
-footer {
-  background-color: #040404;
-  color: #eef0eb;
-}
-
-.nav {
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-  top: 0;
-}
-
-.nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.nav li {
-  margin: 5px 10px;
-}
-
-.nav a {
-  color: #eef0eb;
-  text-decoration: none;
-  padding: 5px 10px;
-  font-weight: bold;
-}
-
-.nav a:hover {
-  border-bottom: solid 2px #042bfc;
-}
-
 .overlay {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 4rem;
+  padding: 5%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .home {
@@ -70,22 +33,22 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 99vh;
 }
 
 .home__logo {
-  width: 50rem;
+  width: 50%;
   flex-shrink: 1;
 }
 
-main {
-  margin-top: 3rem;
+.content {
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
 }
 
 section {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 h1,
@@ -95,6 +58,7 @@ h2 {
 
 /* Gallery Styles */
 .gallery {
+  padding: 40px 10%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -104,6 +68,22 @@ h2 {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.video-container {
+  position: relative;
+  width: 100%; /* Hace que ocupe el 100% del contenedor */
+  padding-bottom: 56.25%; /* Proporción 16:9 (altura = 9/16 * ancho) */
+  height: 0; /* La altura será controlada por el padding */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 100%; /* Ocupa toda la altura del contenedor */
+  border: 0;
 }
 
 /* Botón */
@@ -127,6 +107,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
 }
 
 .contact__button {
@@ -165,8 +146,10 @@ h2 {
 }
 
 footer {
+  background-color: #040404;
+  color: #eef0eb;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   width: 100%;
 }
 
@@ -185,13 +168,7 @@ footer {
   .gallery {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    text-align: center;
   }
-}
-.custom-video {
-  max-width: 500px;
-  width: 100%;
 }
 
 .information {
