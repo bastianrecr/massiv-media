@@ -58,7 +58,7 @@ h2 {
 
 /* Gallery Styles */
 .gallery {
-  padding: 40px 10%;
+  padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
