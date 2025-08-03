@@ -1,7 +1,13 @@
 .main {
-  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 174px;
+}
+
+@media screen and (max-width: 571px) {
+  .main {
+    padding: 116.5px 0;
+  }
 }
