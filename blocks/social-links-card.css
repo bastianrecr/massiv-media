@@ -1,0 +1,101 @@
+.social-links-card {
+  box-sizing: border-box;
+  width: 26.667%;
+  margin: 0 auto;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px;
+}
+
+.social-links-card__avatar {
+  background-color: #000;
+  border-radius: 50%;
+  width: 88px;
+}
+
+.social-links-card__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.social-links-card__location::before {
+  content: "📍";
+}
+
+.social-links-card__location {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #b4b8ab;
+}
+
+.social-links-card__user-main-information {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.social-links-card__bio {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.social-links-card__links {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-links-card__link {
+  width: 100%;
+}
+
+.social-links-card__link-button {
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 8px;
+
+  background-color: #042bfc;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  justify-self: center;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.social-links-card__link-button:hover {
+  background-color: hsl(0, 0%, 20%);
+  color: #fff;
+}
+
+@media screen and (min-width: 572px) and (max-width: 1104px) {
+  .social-links-card {
+    width: 59.375%;
+  }
+}
+
+@media screen and (max-width: 571px) {
+  .social-links-card {
+    padding: 24px;
+    width: 87.2%;
+  }
+}

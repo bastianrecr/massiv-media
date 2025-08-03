@@ -5,171 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Massiv Media</title>
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" href="./resources/img/massiv-media-logo.PNG" />
+    <link
+      rel="icon"
+      href="./resources/images/logos/massiv-media-logo-black.png"
+    />
   </head>
   <body>
-    <header class="header">
-      <nav class="nav">
-        <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#recent">Reciente</a></li>
-          <li><a href="#about">Nosotros</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-
-      <section class="home" id="home">
-        <div class="home__overlay">
+    <div class="page">
+      <main class="main">
+        <div class="social-links-card">
           <img
-            class="home__logo"
-            src="./resources/img/massiv-media-logo-white.png"
-            alt="Logo de Massiv Media"
+            class="social-links-card__avatar"
+            src="./resources/images/logos/massiv-media-logo-white.png"
+            alt="User's profile picture"
           />
-          <h1>Bienvenido a Massiv Media</h1>
-          <p>Creamos experiencias visuales impactantes que dejan huella.</p>
-          <a href="#contact" class="home__button">Contáctanos</a>
+          <div class="social-links-card__user-main-information">
+            <p class="social-links-card__title">Massiv Media</p>
+            <p class="social-links-card__location">Veracruz, Mexico</p>
+          </div>
+          <p class="social-links-card__bio">"Visualiza tus Ideas."</p>
+          <ul class="social-links-card__links">
+            <li class="social-links-card__link">
+              <a
+                href="https://wa.me/message/VRIIWAQ4WU5ND1"
+                class="social-links-card__link-button"
+                target="_blank"
+                >Whatsapp</a
+              >
+            </li>
+            <li class="social-links-card__link">
+              <a
+                href="https://www.instagram.com/massiv.media/"
+                class="social-links-card__link-button"
+                target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li class="social-links-card__link">
+              <a
+                href="https://www.facebook.com/profile.php?id=100090131876378&mibextid=LQQJ4d"
+                class="social-links-card__link-button"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li class="social-links-card__link">
+              <a
+                href="https://www.tiktok.com/@massiv.media"
+                class="social-links-card__link-button"
+                target="_blank"
+                >TikTok</a
+              >
+            </li>
+          </ul>
         </div>
-      </section>
-    </header>
-    <main class="content">
-      <!-- <section id="recent" class="recent">
-        <h2 class="recent__title">Reciente</h2> -->
-        <!-- <article class="gallery">
-          <img
-            src="./resources/img/perreo-terrorifico-1.jpg"
-            alt="Videoclip con Bxby y Yoshi Parayal"
-          />
-          <div class="video-container">
-            <iframe
-              class="custom-video"
-              src="https://www.youtube.com/embed/V2LakKERxiY"
-              title="Perreo Terrorífico - Yoshi Parayal x @bxby_zv  (F#ck Inn Fest) (Video Oficial)"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <img
-            src="./resources/img/perreo-terrorifico-2.jpg"
-            alt="Videoclip con Bxby y Yoshi Parayal"
-          />
-          <img
-            src="./resources/img/industrial-room-1.jpg"
-            alt="Industrial Room"
-          />
-          <img
-            src="./resources/img/boqueria.png"
-            alt="Fotografías de alimentos"
-          />
-          <img
-            src="./resources/img/industrial-room-2.jpg"
-            alt="Colaboración con Industrial Room"
-          />
-          <img src="./resources/img/bxby.jpg" alt="Videoclip con Bxby" />
-          <div class="video-container">
-            <iframe
-              class="custom-video"
-              src="https://www.youtube.com/embed/0y-8BsaToQk?si=BRCnxGszv6aAfZ6n"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <img src="./resources/img/bxby2.jpg" alt="Videoclip con Bxby" />
-          <img
-            src="./resources/img/arlequin.jpg"
-            alt="Colaboración con Arlequin Entertainment"
-          />
-          <img
-            src="./resources/img/industrial-room-3.jpg"
-            alt="StaleBread! en Indusrial Room"
-          />
-          <img
-            src="./resources/img/arlequin2.jpg"
-            alt="Colaboración con Arlequin Entertainment"
-          />
-        </article> -->
-      </section>
-      <section class="information" id="about">
-        <h2>Nosotros</h2>
-        <p>
-          Somos una agencia creativa especializada en diseño visual. Fundada por
-          dos hermanos apasionados por el video, la fotografía y la música, en
-          Orizaba, Veracruz, México, nuestro objetivo es convertirnos en la
-          productora audiovisual número uno. Ofrecemos soluciones innovadoras y
-          de alta calidad. Nuestro equipo creativo está altamente capacitado y
-          comprometido con crear visuales impactantes que cautiven a las
-          audiencias, logrando que cada proyecto tenga un sello único y
-          memorable.
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">
+          &copy; <span class="footer__copyright-year" id="year"></span> Massiv
+          Media. Todos los derechos reservados.
         </p>
-      </section>
-      <section class="contact" id="contact">
-        <h2>Contáctanos</h2>
-        <a
-          href="https://wa.me/message/VRIIWAQ4WU5ND1"
-          target="_blank"
-          class="contact__button"
-        >
-          <img
-            src="./resources/img/social-media-icons/whatsapp.svg"
-            alt="Logo de WhatsApp"
-            class="social-logo"
-          />
-          <span class="button-text">WhatsApp</span>
-        </a>
-        <a
-          href="https://www.instagram.com/massiv.media/"
-          target="_blank"
-          class="contact__button"
-        >
-          <img
-            src="./resources/img/social-media-icons/instagram.svg"
-            alt="Logo de Instagram"
-            class="social-logo"
-          />
-          <span class="button-text">Instagram</span>
-        </a>
-        <a
-          href="https://www.facebook.com/profile.php?id=100090131876378&mibextid=LQQJ4d"
-          target="_blank"
-          class="contact__button"
-        >
-          <img
-            src="./resources/img/social-media-icons/facebook.svg"
-            alt="Logo de Facebook"
-            class="social-logo"
-          />
-          <span class="button-text">Facebook</span>
-        </a>
-        <a
-          href="https://www.tiktok.com/@massiv.media"
-          target="_blank"
-          class="contact__button"
-        >
-          <img
-            src="./resources/img/social-media-icons/tiktok.svg"
-            alt="Logo de TikTok"
-            class="social-logo"
-          />
-          <span class="button-text">TikTok</span>
-        </a>
-
-        <!-- <form>
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" required />
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" required></textarea>
-          <input type="submit" value="Enviar Mensaje" />
-        </form> -->
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2023 Massiv Media. Todos los derechos reservados.</p>
-    </footer>
+      </footer>
+    </div>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
