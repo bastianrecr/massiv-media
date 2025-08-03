@@ -146,7 +146,7 @@ footer {
   width: 100%;
 }
 
-@media screen (max-width: 544px) {
+@media (max-width: 544px) {
   .contact__button {
     width: 80%;
   }
