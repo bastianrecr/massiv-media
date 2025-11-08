@@ -1,0 +1,117 @@
+/* ===== Footer / Contacto ===== */
+.contact {
+  padding: clamp(32px, 7vw, 96px) clamp(16px, 5vw, 64px) clamp(40px, 8vw, 120px);
+  background: #000;
+  color: #ededed;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(32px, 5vw, 72px);
+  text-align: center;
+}
+
+.contact__title {
+  text-align: center;
+}
+
+/* Contenedor */
+
+/* GRID centrado y con tarjetas de la misma huella */
+.contact__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+  justify-items: center; /* centra cada tarjeta */
+  align-content: center; /* centra el conjunto si hay fila incompleta */
+}
+
+/* Tarjeta uniforme */
+.contact__btn {
+  display: grid;
+  grid-auto-rows: min-content;
+  place-items: center;
+  gap: 18px;
+
+  inline-size: 100%;
+  max-inline-size: 320px; /* tope visual */
+  aspect-ratio: 4 / 3;
+  padding: 18px 20px;
+
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, background 0.18s ease,
+    border-color 0.18s ease;
+}
+.contact__btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+.contact__btn:focus-visible {
+  outline: 2px solid #9ad1ff;
+  outline-offset: 2px;
+}
+
+/* Normalización óptica del ícono */
+.contact__icon {
+  display: grid;
+  place-items: center;
+  inline-size: 84px; /* caja idéntica para todos */
+  block-size: 84px;
+}
+.contact__icon svg {
+  display: block;
+  inline-size: 60%; /* el dibujo no “pega” a los bordes */
+  block-size: 60%;
+}
+
+/* Textos */
+.contact__text {
+  display: grid;
+  gap: 8px;
+  line-height: 1.2;
+}
+.contact__label {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.05;
+}
+.contact__detail {
+  color: #cfcfcf;
+  font-size: 18px;
+}
+
+/* Desktop > */
+@media (min-width: 721px) {
+  .contact__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet/phone – una columna centrada */
+@media (max-width: 720px) {
+  .contact__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+  }
+  .contact__btn {
+    inline-size: 100%;
+    aspect-ratio: 16/11;
+  } /* un poco más “apaisada” */
+  .contact__label {
+    font-size: 24px;
+  }
+}
+
+/* Compacta detalles en pantallas medianas si quieres */
+@media (max-width: 900px) {
+  .contact__detail {
+    display: none;
+  }
+}

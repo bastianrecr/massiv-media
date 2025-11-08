@@ -1,0 +1,10 @@
+/* Questrial — único peso (400), sin italic */
+@font-face {
+  font-family: "Questrial";
+  src: local("Questrial"), local("Questrial Regular"),
+    url("../vendor/fonts/questrial/Questrial-Regular.woff2") format("woff2"),
+    url("../vendor/fonts/questrial/Questrial-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

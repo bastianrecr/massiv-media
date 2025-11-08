@@ -1,0 +1,24 @@
+.section__title {
+  font-size: 96px;
+  margin: 0;
+}
+
+.section__text {
+  margin: 0;
+  font-size: 18px;
+  text-align: justify;
+}
+
+@media (max-width: 720px) {
+  .section__title {
+    font-size: 52px;
+  }
+  .section__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .section__title {
+    font-size: 36px;
+  }
+}

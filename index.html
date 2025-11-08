@@ -1,82 +1,705 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Massiv Media</title>
     <link rel="stylesheet" href="./pages/index.css" />
-    <link
-      rel="icon"
-      href="./resources/images/logos/massiv-media-logo-black.png"
-    />
+    <title>Massiv Media</title>
   </head>
+
   <body>
     <div class="page">
-      <main class="main">
-        <div class="social-links-card">
-          <img
-            class="social-links-card__avatar"
-            src="./resources/images/logos/massiv-media-logo-white.png"
-            alt="User's profile picture"
-          />
-          <div class="social-links-card__user-main-information">
-            <p class="social-links-card__title">Massiv Media</p>
-            <p class="social-links-card__location">Veracruz, México</p>
+      <header class="header">
+        <video
+          class="header__video header__video--desktop"
+          src="./assets/videos/demo_hor_homepage.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+        <video
+          class="header__video header__video--mobile"
+          src="./assets/videos/demo_vert_homepage.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+
+        <img
+          class="header__logo"
+          src="./assets/images/Logo-Massiv-Media-Blanco.PNG"
+          alt=""
+        />
+        <div class="header__info">
+          <p class="header__text header__text--slogan">"Visualiza tus Ideas"</p>
+          <p class="header__text">Producción Audiovisual</p>
+        </div>
+        <!-- dentro de <header class="header"> -->
+        <!-- Toggle (hamburguesa) + barra -->
+        <nav class="nav" aria-label="Principal">
+          <p class="nav__slogan">"Visualiza tus Ideas"</p>
+          <button
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="nav-panel"
+            aria-label="Abrir menú"
+          >
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+          </button>
+
+          <!-- links visibles en desktop -->
+          <ul class="nav__links">
+            <li class="nav__link">
+              <a href="#about" class="nav__link-text">Sobre Nosotros</a>
+            </li>
+            <li class="nav__link">
+              <a href="#services" class="nav__link-text">Servicios</a>
+            </li>
+            <li class="nav__link">
+              <a href="#equipment" class="nav__link-text">Nuestro Equipo</a>
+            </li>
+            <li class="nav__link">
+              <a href="#footer" class="nav__link-text">Contacto</a>
+            </li>
+          </ul>
+
+          <!-- panel móvil (off-canvas superior) -->
+          <div class="nav__panel" id="nav-panel">
+            <ul class="nav__panel-list">
+              <li class="nav__panel-item">
+                <a href="#about" class="nav__panel-link">Sobre Nosotros</a>
+              </li>
+              <li class="nav__panel-item">
+                <a href="#services" class="nav__panel-link">Servicios</a>
+              </li>
+              <li class="nav__panel-item">
+                <a href="#equipment" class="nav__panel-link">Nuestro Equipo</a>
+              </li>
+              <li class="nav__panel-item">
+                <a href="#footer" class="nav__panel-link">Contacto</a>
+              </li>
+            </ul>
           </div>
-          <p class="social-links-card__bio">"Visualiza tus Ideas."</p>
-          <ul class="social-links-card__links">
-            <li class="social-links-card__link">
+        </nav>
+      </header>
+      <main class="content">
+        <section class="section about" id="about">
+          <article class="about__text-content">
+            <h2 class="section__title">Sobre Nosotros</h2>
+            <div class="about__description">
+              <p class="section__text">
+                En Massiv Media creemos que el contenido es una inversión, no un
+                gasto. Por eso unimos dirección creativa, producción audiovisual
+                y estrategia digital para convertir ideas en crecimiento real.
+              </p>
+              <p class="section__text">
+                Trabajamos de la mano contigo: entendemos tu mercado, definimos
+                mensajes clave y diseñamos un plan que integra video/fotografía,
+                publicidad, branding ligero y medición continua.
+              </p>
+              <p class="section__text">
+                Nuestro sello combina estética cuidada y procesos eficientes:
+                preproducción sólida, rodajes ágiles, postproducción detallista
+                y un seguimiento de métricas que nos permite optimizar cada mes.
+                Nacimos en Orizaba, orgullosos de las Altas Montañas, y
+                colaboramos con negocios que quieren dar el siguiente paso—sea a
+                nivel local, nacional, e internacional.
+              </p>
+              <p class="section__text">
+                Si buscas un equipo cercano, exigente con la calidad e
+                obsesionado con el ROI, hablemos. Tu historia merece contarse
+                con la misma fuerza con la que fue creada.
+              </p>
+            </div>
+          </article>
+          <!-- ...dentro de <main class="content"> -->
+
+          <img src="./assets/images/about.png" alt="" class="about__image" />
+        </section>
+        <section
+          class="section services"
+          id="services"
+          aria-labelledby="services-heading"
+        >
+          <h2 id="services-heading" class="section__title services__title">
+            Servicios
+          </h2>
+          <a
+            href="https://massivmediamx93f4.myportfolio.com/work"
+            target="_blank"
+            class="services__subtitle"
+          >
+            Haz click aquí para ver nuestro portafolio
+          </a>
+
+          <!-- MISMO listado sirve para grid (desktop) y carrusel (móvil) -->
+          <ul class="services__list" id="services-list">
+            <li class="services__item">
               <a
-                href="https://wa.me/message/VRIIWAQ4WU5ND1"
-                class="social-links-card__link-button"
-                target="_blank"
-                >Whatsapp</a
-              >
-            </li>
-            <li class="social-links-card__link">
-              <a
+                class="service-card"
                 href="https://www.instagram.com/massiv.media/"
-                class="social-links-card__link-button"
                 target="_blank"
-                >Instagram</a
+                aria-label="Comerciales"
+                data-demo="demo/comerciales.mp4"
               >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/comerciales.png"
+                  alt="Rodaje de comercial con cámara"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Comerciales</span>
+              </a>
             </li>
-            <li class="social-links-card__link">
+
+            <li class="services__item">
               <a
-                href="https://www.facebook.com/profile.php?id=100090131876378&mibextid=LQQJ4d"
-                class="social-links-card__link-button"
-                target="_blank"
-                >Facebook</a
+                class="service-card"
+                href="#"
+                aria-label="Aftermovies"
+                data-demo="demo/aftermovies.mp4"
               >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/aftermovies.png"
+                  alt="Festival con fuegos artificiales"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Aftermovies</span>
+              </a>
             </li>
-            <li class="social-links-card__link">
+
+            <li class="services__item">
               <a
-                href="https://www.tiktok.com/@massiv.media"
-                class="social-links-card__link-button"
-                target="_blank"
-                >TikTok</a
+                class="service-card"
+                href="#"
+                aria-label="Videos Musicales"
+                data-demo="demo/videos-musicales.mp4"
               >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/videos-musicales.png"
+                  alt="Banda tocando en estudio"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Videos musicales</span>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Documentales"
+                data-demo="demo/documentales.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/documentales.png"
+                  alt="Entrevista documental"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Documentales</span>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Entrevista"
+                data-demo="demo/documentales.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/entrevistas.png"
+                  alt="Entrevista documental"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Entrevistas</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="service-card" href="#">
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/edicion-y-color-grade.png"
+                  alt="Evento musical con luces"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Edición y color grade</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Streaming"
+                data-demo="demo/streaming.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/streaming.png"
+                  alt="Consola de audio para streaming"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Streaming</span>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Marca personal"
+                data-demo="demo/marca-personal.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/marca-personal.png"
+                  alt="Retrato para marca personal"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Marca personal</span>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Live DJ Sets"
+                data-demo="demo/live-dj.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/live-dj-sets.png"
+                  alt="Cabina de DJ en vivo"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Live DJ Sets</span>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Drone"
+                data-demo="demo/drone.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/drone.png"
+                  alt="Drone en vuelo"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Drone</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Cobertura de Eventos"
+                data-demo="demo/eventos.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/cobertura-de-eventos.png"
+                  alt="Partido de Padel"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Cobertura de Eventos</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Podcast"
+                data-demo="demo/podcast.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/podcast.png"
+                  alt="Grabación de podcast"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Podcast</span>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Diseño y renders 3D"
+                data-demo="demo/renders-3d.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?q=80&w=1400&auto=format&fit=crop"
+                  alt="Render 3D en monitor"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Diseño y renders 3D</span>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="VFX y animación 3D"
+                data-demo="demo/vfx-animacion.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/vfx-y-animacion-3d.png"
+                  alt="Pasillo de luz futurista"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">VFX y animación 3D</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Visualizers"
+                data-demo="demo/visualizers.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/visualizers.png"
+                  alt="Pantalla con animación gráfica"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Visualizers</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Fotografía"
+                data-demo="demo/fotografia.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/fotografia.png"
+                  alt="Retrato en playa"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label">Fotografía</span>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a
+                class="service-card"
+                href="#"
+                aria-label="Diseño e identidad visual"
+                data-demo="demo/identidad-visual.mp4"
+              >
+                <img
+                  class="service-card__img"
+                  src="./assets/images/services/horizontal/diseno-e-identidad-visual.png "
+                  alt="Escritorio con diseño gráfico en pantalla"
+                  loading="lazy"
+                />
+                <span class="service-card__overlay" aria-hidden="true"></span>
+                <span class="service-card__label"
+                  >Diseño e identidad visual</span
+                >
+              </a>
+            </li>
+          </ul>
+
+          <!-- Controles visibles solo en móvil -->
+          <div class="services__controls" aria-hidden="true">
+            <button class="services__btn" data-dir="-1" type="button">
+              ◀︎
+            </button>
+            <button class="services__btn" data-dir="1" type="button">▶︎</button>
+          </div>
+        </section>
+        <section
+          class="section equipment"
+          id="equipment"
+          aria-labelledby="equipment-title"
+        >
+          <div class="equipment__wrap">
+            <!-- Columna texto -->
+            <div class="equipment__col equipment__col--text">
+              <h2 class="section__title equipment__title" id="equipment-title">
+                Nuestro Equipo
+              </h2>
+
+              <ul class="equipment__list">
+                <li class="equipment__item">
+                  <h3 class="equipment__heading">Imagen</h3>
+                  <p class="equipment__desc">
+                    cámaras y drones cinema line con sensor de alto rango
+                    dinámico, grabación 4K en perfiles log para gradación
+                    avanzada, muestreo 10-bit 4:2:2 y ópticas de precisión para
+                    nitidez y bokeh controlado.
+                  </p>
+                  <!-- imagen para MOBILE -->
+                  <figure class="equipment__media">
+                    <img
+                      src="./assets/images/equipment/equipment-1.png"
+                      alt="Cámara de cine con rig"
+                      loading="lazy"
+                    />
+                  </figure>
+                </li>
+
+                <li class="equipment__item">
+                  <h3 class="equipment__heading">Luz</h3>
+                  <p class="equipment__desc">
+                    iluminación continua profesional (key, fill, back y
+                    prácticas) con modificadores para pieles naturales y
+                    contraste controlado; consistencia de temperatura de color
+                    en todo el rodaje.
+                  </p>
+                  <figure class="equipment__media">
+                    <img
+                      src="./assets/images/equipment/equipment-2.png"
+                      alt="Set de luces de estudio"
+                      loading="lazy"
+                    />
+                  </figure>
+                </li>
+
+                <li class="equipment__item">
+                  <h3 class="equipment__heading">Movimiento</h3>
+                  <p class="equipment__desc">
+                    soluciones de estabilización y soporte (gimbals, trípodes
+                    fluidos, rigs) para planos estáticos, entrevistas y tomas en
+                    movimiento suaves.
+                  </p>
+                  <figure class="equipment__media">
+                    <img
+                      src="./assets/images/equipment/equipment-3.png"
+                      alt="Gimbals dobles en set"
+                      loading="lazy"
+                    />
+                  </figure>
+                </li>
+
+                <li class="equipment__item">
+                  <h3 class="equipment__heading">Post</h3>
+                  <p class="equipment__desc">
+                    edición, corrección primaria y grading creativo con
+                    monitores calibrados; gestión de color para web, TV o
+                    proyección; entregables 4K y versiones sociales optimizadas.
+                  </p>
+                  <figure class="equipment__media">
+                    <img
+                      src="./assets/images/equipment/equipment-5.png"
+                      alt="Software de color y edición"
+                      loading="lazy"
+                    />
+                  </figure>
+                </li>
+
+                <li class="equipment__item">
+                  <h3 class="equipment__heading">Seguridad</h3>
+                  <p class="equipment__desc">
+                    respaldo de medios on set y doble copia en post para
+                    proteger tu proyecto de punta a punta.
+                  </p>
+                  <figure class="equipment__media">
+                    <img
+                      src="./assets/images/equipment/equipment-6.png"
+                      alt="SSD portátil para respaldos"
+                      loading="lazy"
+                    />
+                  </figure>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Columna galería (solo desktop/tablet) -->
+            <div class="equipment__col equipment__col--gallery">
+              <div class="equipment__grid">
+                <img
+                  class="equipment__photo"
+                  src="./assets/images/equipment/equipment-1.png"
+                  alt="Rig de cámara"
+                  loading="lazy"
+                />
+                <img
+                  class="equipment__photo"
+                  src="./assets/images/equipment/equipment-2.png"
+                  alt="Luces de estudio"
+                  loading="lazy"
+                />
+                <img
+                  class="equipment__photo"
+                  src="./assets/images/equipment/equipment-3.png"
+                  alt="Gimbals de estabilización"
+                  loading="lazy"
+                />
+                <img
+                  class="equipment__photo"
+                  src="./assets/images/equipment/equipment-4.png"
+                  alt="Micrófono shotgun"
+                  loading="lazy"
+                />
+                <img
+                  class="equipment__photo"
+                  src="./assets/images/equipment/equipment-5.png "
+                  alt="Suite de color"
+                  loading="lazy"
+                />
+                <img
+                  class="equipment__photo"
+                  src="./assets/images/equipment/equipment-6.png"
+                  alt="Unidad SSD"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer" id="footer" aria-labelledby="contact-title">
+        <div class="contact">
+          <h2 class="section__title contact__title" id="contact-title">
+            Contacto
+          </h2>
+
+          <ul class="contact__list">
+            <!-- WhatsApp -->
+            <li class="contact__item">
+              <a
+                class="contact__btn"
+                href="https://wa.me/message/VRIIWAQ4WU5ND1"
+                target="_blank"
+                rel="noopener"
+                aria-label="Escríbenos por WhatsApp al +52 272 326 1761"
+              >
+                <span class="contact__icon" aria-hidden="true">
+                  <!-- WhatsApp SVG -->
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="68"
+                    height="68"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M20.52 3.48A11.94 11.94 0 0 0 12.01 0C5.39 0 .02 5.37.02 11.98c0 2.11.55 4.17 1.6 6L0 24l6.15-1.58a12.02 12.02 0 0 0 5.86 1.5h.01c6.62 0 11.99-5.37 11.99-11.99 0-3.2-1.25-6.21-3.49-8.45ZM12.01 22a9.97 9.97 0 0 1-5.08-1.39l-.36-.21-3.65.94.97-3.56-.24-.37a9.98 9.98 0 1 1 8.36 4.59Zm5.77-7.43c-.31-.15-1.83-.9-2.11-1-.28-.1-.49-.15-.7.16-.2.31-.81 1-.99 1.2-.18.2-.36.23-.67.08-.31-.15-1.3-.48-2.49-1.52-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.13-.63.13-.13.31-.36.46-.54.15-.18.2-.31.31-.52.1-.2.05-.38-.03-.54-.08-.15-.7-1.69-.96-2.32-.25-.6-.5-.52-.7-.53h-.6c-.2 0-.52.08-.79.38-.27.31-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.21 5.1 4.5.71.31 1.27.49 1.7.62.71.23 1.35.2 1.86.12.57-.08 1.83-.75 2.09-1.47.26-.72.26-1.35.18-1.47-.08-.11-.28-.2-.59-.35Z"
+                    />
+                  </svg>
+                </span>
+                <span class="contact__text">
+                  <span class="contact__label">WhatsApp</span>
+                  <span class="contact__detail">+52 272 326 1761</span>
+                </span>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li class="contact__item">
+              <a
+                class="contact__btn"
+                href="mailto:massivmediamx@gmail.com?subject=Consulta%20Massiv%20Media"
+                aria-label="Envíanos un correo a massivmediamx@gmail.com"
+              >
+                <span class="contact__icon" aria-hidden="true">
+                  <!-- Email SVG -->
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="68"
+                    height="68"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+                    />
+                  </svg>
+                </span>
+                <span class="contact__text">
+                  <span class="contact__label">Email</span>
+                  <span class="contact__detail">massivmediamx@gmail.com</span>
+                </span>
+              </a>
+            </li>
+
+            <!-- Instagram -->
+            <li class="contact__item">
+              <a
+                class="contact__btn"
+                href="https://instagram.com/massiv.media"
+                target="_blank"
+                rel="noopener"
+                aria-label="Visita nuestro Instagram @massiv.media"
+              >
+                <span class="contact__icon" aria-hidden="true">
+                  <!-- Instagram SVG -->
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="68"
+                    height="68"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 3a5.75 5.75 0 1 1 0 11.5a5.75 5.75 0 0 1 0-11.5Zm0 1.5a4.25 4.25 0 1 0 0 8.5a4.25 4.25 0 0 0 0-8.5Zm5-1.25a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5Z"
+                    />
+                  </svg>
+                </span>
+                <span class="contact__text">
+                  <span class="contact__label">Instagram</span>
+                  <span class="contact__detail">@massiv.media</span>
+                </span>
+              </a>
             </li>
           </ul>
         </div>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">
-          &copy; <span class="footer__copyright-year" id="year"></span> Massiv
-          Media. All rights reserved.
-        </p>
-        <p class="footer__credit">
-          Designed & developed by
-          <a
-            href="https://bastianrecr.github.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer__credit-link"
-            >bastianrecr</a
-          >
-        </p>
+        <section class="footer__copyright">
+          <p class="footer__copyright-info">
+            &copy; <span class="footer__copyright-year" id="year"></span> Massiv
+            Media. All rights reserved.
+          </p>
+          <p class="footer__credit">
+            Designed & developed by Massiv Media &amp;
+            <a
+              href="https://bastianrecr.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__credit-link"
+              >bastianrecr</a
+            >
+          </p>
+        </section>
       </footer>
+      <button id="toTop" class="to-top" aria-label="Volver al inicio" hidden>
+        ↑
+      </button>
+      <script type="module" src="./assets/js/main.js"></script>
     </div>
-    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

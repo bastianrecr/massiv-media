@@ -1,0 +1,20 @@
+.page {
+  background-color: #000;
+  color: #fff;
+  font-family: "Questrial", sans-serif;
+  --nav-h: 64px;
+}
+.page--nav-fixed .content {
+  padding-top: var(--nav-h);
+}
+/* bloqueo de scroll cuando el menú móvil está abierto */
+.page--lock {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding-top: calc(64px + env(safe-area-inset-top));
+  }
+}

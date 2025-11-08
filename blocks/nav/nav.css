@@ -1,0 +1,160 @@
+/* ===== Base existente (no lo quites) ===== */
+.nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  height: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, height 0.2s ease;
+}
+.nav--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  padding-top: env(safe-area-inset-top);
+}
+
+.nav__slogan {
+  display: none; /* visible en mobile */
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.nav__links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 60px;
+}
+.nav__link-text {
+  color: #fff;
+  text-decoration: none;
+} /* ===== Toggle / Hamburguesa ===== */
+.nav__toggle {
+  display: none; /* visible en mobile */
+  position: absolute;
+  right: clamp(12px, 3vw, 24px);
+  top: clamp(12px, 3vw, 20px);
+  z-index: 10000;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.nav__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 5px auto;
+  background: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+} /* animación a "X" cuando está abierto */
+.nav--open .nav__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav--open .nav__bar:nth-child(2) {
+  opacity: 0;
+}
+.nav--open .nav__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+} /* ===== Panel móvil ===== */
+.nav__panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(6px);
+  padding: calc(env(safe-area-inset-top) + 12px) 16px 28px;
+  padding-top: 60px;
+  z-index: 9998;
+  transition: transform 0.24s ease;
+}
+.nav--open .nav__panel {
+  transform: translateY(0);
+}
+.nav__panel-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.nav__panel-link {
+  display: block;
+  padding: 14px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+} /* ===== Responsive ===== */
+@media (max-width: 720px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    padding-top: env(safe-area-inset-top);
+  }
+  .nav__slogan {
+    display: block;
+  }
+  .nav__links {
+    display: none;
+  } /* ocultar lista horizontal */
+  .nav__toggle {
+    display: inline-block;
+  }
+} /* ===== Botón Volver Arriba ===== */
+.to-top {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  z-index: 10000;
+}
+.to-top[hidden] {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+.to-top:active {
+  transform: translateY(1px);
+}

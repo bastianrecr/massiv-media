@@ -2,11 +2,22 @@
   background-color: #000;
 }
 
-.footer__credit {
-  font-size: 0.75rem;
-  color: #888;
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 10px;
+}
+
+.footer__copyright-info {
+  margin: 0;
   text-align: center;
-  margin-top: 0.25rem;
+}
+.footer__credit {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
 }
 
 .footer__credit-link {
@@ -19,6 +30,6 @@
 }
 @media screen and (max-width: 571px) {
   .footer__copyright {
-    font-size: 0.75rem;
+    font-size: 14px;
   }
 }
