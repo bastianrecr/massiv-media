@@ -45,7 +45,7 @@
   position: relative;
   z-index: 999;
 }
-@media (max-width: 720px) {
+@media (max-width: 840px) {
   .header {
     min-height: 86vh; /* un poco más alto en móviles modernos */
     gap: 40px;
